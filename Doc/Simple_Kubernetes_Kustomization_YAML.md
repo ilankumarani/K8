@@ -11,6 +11,9 @@ kustomize-example/
 │   │── service.yaml
 │   │── kustomization.yaml
 │── overlays/
+│   ├── local/
+│   │   │── kustomization.yaml
+│   │   │── patch-deployment.yaml
 │   ├── dev/
 │   │   │── kustomization.yaml
 │   │   │── patch-deployment.yaml
