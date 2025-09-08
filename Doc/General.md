@@ -5,15 +5,15 @@ kubectl api-resources
 
 ###### K8 create namspace
 ```shell
-kubectl create namespace my-namespace
+kubectl create namespace ilan-dev
 ```
 
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ILAN_Dev
+  name: ilan-dev
   labels:
-    name: ILAN_Dev
+    name: ilan-dev
 ```
 
