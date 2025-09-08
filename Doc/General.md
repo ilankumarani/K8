@@ -17,3 +17,8 @@ metadata:
     name: ilan-dev
 ```
 
+###### K8 get Pods details in wider way
+```shell
+kubectl get pods -o wide
+```
+
