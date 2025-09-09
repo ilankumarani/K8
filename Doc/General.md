@@ -19,6 +19,11 @@ metadata:
 
 ###### K8 get Pods details in wider way
 ```shell
-kubectl get pods -o wide
+kubectl get pods --all-namespaces
+kubectl get pods
+kubectl get pod -n <namespace-name>
+kubectl get pods -n <namespace-name>
+kubectl describe pod <pod-name>
+kubectl describe pod <pod-name> -n <namespace>
 ```
 

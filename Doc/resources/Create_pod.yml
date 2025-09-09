@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-pod # Name of the POD
+spec:
+  containers:
+    - name: my-container # Name of the Container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-pod
+  namespace: my-namespace # Namespace where this POD has to be created
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+
+
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      resources:
+        requests:
+          cpu: "100m"     # 0.1 core
+          memory: "128Mi" # 128 MB
+        limits:
+          cpu: "500m"     # 0.5 core
+          memory: "256Mi" # 256 MB
+
