@@ -1,0 +1,3 @@
+```shell
+kubectl get 
+```
