@@ -1,4 +1,4 @@
-## Namespace
+## 1) Namespace
 
 A namespace in Kubernetes (k8s) is like a folder that helps organize and separate different groups of resources (like pods, services, deployments) inside the same cluster.
 
@@ -11,19 +11,46 @@ A namespace in Kubernetes (k8s) is like a folder that helps organize and separat
 
 -----
 
-## POD and POD lifecycle
+## 2) POD and POD lifecycle
 
 [Click to learn about Pod](Doc/Pod.md)
 
 ------
-## Request
+## 3) Request & Limit
+
+**Request →** the minimum amount of CPU/Memory a Pod needs to run. Kubernetes will guarantee at least this much.
+
+**Limit →** the maximum amount of CPU/Memory a Pod can use. Kubernetes won’t let it go beyond this.
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: mycontainer
+      image: nginx
+      resources:
+        requests:
+          cpu: "250m"     # minimum 0.25 CPU
+          memory: "256Mi" # minimum 256 MB
+        limits:
+          cpu: "500m"     # maximum 0.5 CPU
+          memory: "512Mi" # maximum 512 MB
+```
+### 3.1) LimitRange and ResourceQuota
+[Read more about yaml](Doc/Doc/readMe/K8s-Resource-Management-Full-README.md)
+
+**How it works with LimitRange:**
+*	**LimitRange →** sets defaults per Pod/container.
+*	**ResourceQuota →** sets the overall ceiling for the Namespace.
+
+**Think of it like:**
+*	**LimitRange =** rules for each employee (Pod).
+*	**ResourceQuota =** total company budget (Namespace).
 
 ------
-## Limit
-
-
-------
-## ReplicaSet
+## 4) ReplicaSet
 
 A Replica in Kubernetes means how many copies of your Pod you want running at the same time.
 
@@ -54,7 +81,7 @@ kubectl get rs <replicaSet_name>
 
 
 ------
-## DemonSet
+## 5) DemonSet
 A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk Agent in each Node)
 
 [Click to know more about DemonSet](Doc/readMe/DaemonSet-README.md)
