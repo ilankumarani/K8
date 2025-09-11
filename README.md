@@ -75,7 +75,7 @@ kubectl get rs <replicaSet_name>
 
 > [!NOTE]
 >
-> **If you delete the ReplicaSet all pods will be deleted.**
+> **Deleting a ReplicaSet also deletes all its Pods associated with that.**
 >
 > [Click here to learn](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 
@@ -88,4 +88,6 @@ A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk 
 
 ------
 ## K8 commands
+[Cheat sheet](https://spacelift.io/blog/kubernetes-cheat-sheet)
+
 [Click to know more about Commands](Doc/General.md)
