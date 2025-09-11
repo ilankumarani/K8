@@ -39,7 +39,7 @@ spec:
           memory: "512Mi" # maximum 512 MB
 ```
 ### 3.1) LimitRange and ResourceQuota
-[Read more about yaml](Doc/Doc/readMe/K8s-Resource-Management-Full-README.md)
+[Read more about yaml](Doc/readMe/K8s-Resource-Management-Full-README.md)
 
 **How it works with LimitRange:**
 *	**LimitRange →** sets defaults per Pod/container.
