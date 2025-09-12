@@ -53,6 +53,11 @@ A Pod is Kubernetes’ smallest deployable unit: one or more containers that run
 **Request →** the minimum amount of CPU/Memory a Pod needs to run. Kubernetes will guarantee at least this much.
 
 **Limit →** the maximum amount of CPU/Memory a Pod can use. Kubernetes won’t let it go beyond this.
+
+<details>
+
+<summary>Example of pod yml</summary>
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -70,6 +75,8 @@ spec:
           cpu: "500m"     # maximum 0.5 CPU
           memory: "512Mi" # maximum 512 MB
 ```
+</details>
+
 ### 3.1) LimitRange and ResourceQuota
 [Read more about yaml](Doc/readMe/K8s-Resource-Management-Full-README.md)
 
@@ -91,6 +98,10 @@ A Replica in Kubernetes means how many copies of your Pod you want running at th
 *	If you set replicas = 3, Kubernetes makes sure 3 identical Pods are always running.
 *	If one Pod crashes, Kubernetes will automatically start a new one so that the count always stays at 3.
 
+<details>
+
+<summary>Replicaset command and more</summary>
+
 **Get replicaset:**
 ```shell
 kubectl get rs
@@ -111,6 +122,7 @@ kubectl get rs <replicaSet_name>
 >
 > [Click here to learn](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 
+</details>
 
 ------
 ## 5) DemonSet
