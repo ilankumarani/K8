@@ -13,7 +13,7 @@ A namespace in Kubernetes (k8s) is like a folder that helps organize and separat
 
 ## 2) POD and POD lifecycle
 
-<details>
+<details open>
 
 <summary>What is POD ?</summary>
 
@@ -126,13 +126,13 @@ A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk 
 -----
 ## 7) Services
 
-## 7.1) NodePort
+### 7.1) NodePort
 
 By default, Kubernetes NodePort uses ports in the range 30000–32767.
 
-## 7.1) ClusterIp
+### 7.1) ClusterIp
 
-## 7.2) Ingress
+### 7.2) Ingress
 
 
 
