@@ -13,7 +13,37 @@ A namespace in Kubernetes (k8s) is like a folder that helps organize and separat
 
 ## 2) POD and POD lifecycle
 
-[Click to learn about Pod](Doc/Pod.md)
+<details>
+
+<summary>What is POD ?</summary>
+
+**Simple words:**
+
+A Pod is like a small box that holds one or more containers.
+
+- The containers in the box share the same address and storage.
+- Kubernetes starts, stops, and moves the whole box as one thing.
+
+**Technical explanation:**
+
+A Pod is Kubernetes’ smallest deployable unit: one or more containers that run together on the same node, sharing the IP/ports, localhost network, and optional volumes. They’re scheduled, scaled, and restarted as a single unit.
+
+</details>
+
+<details>
+
+<summary>Lifecycle of pod</summary>
+
+[Click here to learn about Lifecycle](PDF/LifeCycle_of_POD.pdf)
+
+
+> [!NOTE]
+>
+> CrashLoopBackOff is the one important lifecycle of POD
+>
+> [Click here to learn about CrashLoopBackOff](readMe/CrashLoopBackOff-README-section.md)
+
+</details>
 
 [Click for Example POD yml](Doc/resources/Create_pod.yml)
 
@@ -106,6 +136,20 @@ By default, Kubernetes NodePort uses ports in the range 30000–32767.
 
 
 
+
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```ruby
+   puts "Hello World"
+```
 
 
 
