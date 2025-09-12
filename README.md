@@ -15,6 +15,8 @@ A namespace in Kubernetes (k8s) is like a folder that helps organize and separat
 
 [Click to learn about Pod](Doc/Pod.md)
 
+[Click for Example POD yml](Doc/resources/Create_pod.yml)
+
 ------
 ## 3) Request & Limit
 
@@ -85,6 +87,27 @@ kubectl get rs <replicaSet_name>
 A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk Agent in each Node)
 
 [Click to know more about DemonSet](Doc/readMe/DaemonSet-README.md)
+
+------
+## 6) Deployment
+
+
+
+-----
+## 7) Services
+
+## 7.1) NodePort
+
+By default, Kubernetes NodePort uses ports in the range 30000–32767.
+
+## 7.1) ClusterIp
+
+## 7.2) Ingress
+
+
+
+
+
 
 ------
 ## K8 commands
