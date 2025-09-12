@@ -136,23 +136,6 @@ By default, Kubernetes NodePort uses ports in the range 30000–32767.
 
 
 
-
-<details>
-
-<summary>Tips for collapsed sections</summary>
-
-### You can add a header
-
-You can add text within a collapsed section.
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
-
-
-
 ------
 ## K8 commands
 [Cheat sheet](https://spacelift.io/blog/kubernetes-cheat-sheet)
