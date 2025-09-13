@@ -93,44 +93,6 @@ spec:
 
 ---
 
-## 📊 PUML Diagram
-
-```puml
-@startuml
-skinparam packageStyle rectangle
-skinparam defaultFontName Courier
-
-package "Kubernetes Cluster" {
-
-  [Shopping Frontend Pod] as pod1
-  [Shopping Backend Pod] as pod2
-  [Frontend Service] as svc1
-  [Backend Service] as svc2
-
-  pod1 : Labels
-  pod1 : app=shopping-frontend
-  pod1 : tier=ui
-
-  pod2 : Labels
-  pod2 : app=shopping-backend
-  pod2 : tier=api
-
-  svc1 : Selector
-  svc1 : app=shopping-frontend
-  svc1 : tier=ui
-
-  svc2 : Selector
-  svc2 : app=shopping-backend
-  svc2 : tier=api
-
-  svc1 --> pod1 : "Matches Labels"
-  svc2 --> pod2 : "Matches Labels"
-}
-@enduml
-```
-
----
-
 ## 🚀 Key Takeaways
 
 - Use **unique labels** to clearly differentiate Pods in your system.  
