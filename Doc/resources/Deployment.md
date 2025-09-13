@@ -48,6 +48,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
+  #Below template is for POD, Label is for POD      
   template:
     metadata:
       labels:
