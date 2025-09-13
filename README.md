@@ -148,9 +148,11 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
 
 <summary>Expand to learn more</summary>
 
-[Click here to learn **some**](Doc/readMe/Label&Selector1.md)
+[Click here to learn **some**](Doc/readMe/lables&selector/Label&Selector1.md)
 
-[Click here to learn **more**](Doc/readMe/Label&Selector2.md)
+[Click here to learn **more**](Doc/readMe/lables&selector/Label&Selector2.md)
+
+[Click here for **types of Selector**](Doc/readMe/lables&selector/K8s_Selectors_Guide_Readme.md)
 
 ## 🖼️ Tagging Resources
 
