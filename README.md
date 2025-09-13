@@ -134,6 +134,43 @@ A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk 
 ## 6) Deployment
 
 
+## 7) Labels and selectors
+
+**Simple words:**
+
+Some labels are **essential** because Kubernetes needs them to work (like the labels used by a **Service’s selector or operators**). Other labels are just **helpful for organization**, like tagging a Deployment so you can easily find or group it later.
+
+**Technical explanation:**
+
+Some labels are vital(**essential**) (e.g. service's selector, operators, etc.), and others are useful to **tag resources** (e.g. labelling a deployment).
+
+<details>
+
+<summary>Expand to learn more</summary>
+
+## 🖼️ Tagging Resources
+
+![Tagging Resources](Doc/images/Tag_Resource.webp)
+
+## 🖼️ Deployment and Service Example
+
+<table>
+  <tr>
+    <td>
+      <b>Example 1</b><br>
+      <img src="Doc/images/Deployment_Service1.png" width="400"/>
+    </td>
+    <td>
+      <b>Example 2</b><br>
+      <img src="Doc/images/Deployment_Service2.webp" width="400"/>
+    </td>
+  </tr>
+</table>
+
+## 📺 Video Reference
+[![Video Title](https://img.youtube.com/vi/0CV__VnbYCc/0.jpg)](https://www.youtube.com/watch?v=0CV__VnbYCc)
+
+</details>
 
 -----
 ## 7) Services
