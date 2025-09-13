@@ -189,4 +189,4 @@ By default, Kubernetes NodePort uses ports in the range 30000–32767.
 ## K8 commands
 [Cheat sheet](https://spacelift.io/blog/kubernetes-cheat-sheet)
 
-[Click to know more about Commands](Doc/General.md)
+[Click to know more about Commands](Doc/readMe/General.md)
