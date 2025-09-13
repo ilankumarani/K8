@@ -158,11 +158,22 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
   <tr>
     <td>
       <b>Example 1</b><br>
-      <img src="Doc/images/Deployment_Service1.png" width="400"/>
+      <img src="Doc/images/Deployment_Service1.png" width="500"/>
     </td>
     <td>
       <b>Example 2</b><br>
-      <img src="Doc/images/Deployment_Service2.webp" width="400"/>
+      <img src="Doc/images/Deployment_Service2.webp" width="500"/>
+    </td>
+  </tr>
+
+<tr>
+    <td>
+      <b>Example 3</b><br>
+      <img src="Doc/images/Untitled Diagram.drawio.png" width="500"/>
+    </td>
+    <td>
+      <b>Example 4</b><br>
+      <img src="Doc/images/Untitled Diagram.drawio (1).png" width="500"/>
     </td>
   </tr>
 </table>
