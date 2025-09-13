@@ -148,6 +148,10 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
 
 <summary>Expand to learn more</summary>
 
+[Click here to learn **some**](Doc/readMe/Label&Selector1.md)
+
+[Click here to learn **more**](Doc/readMe/Label&Selector2.md)
+
 ## 🖼️ Tagging Resources
 
 ![Tagging Resources](Doc/images/Tag_Resource.webp)
