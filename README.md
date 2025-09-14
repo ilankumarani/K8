@@ -225,7 +225,7 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
 
 -----
 # 📘8) Services
-
+[🔗](https://k21academy.com/docker-kubernetes/kubernetes-networking/)
 ## 🔹 What is a Service?
 A **Service** is another type of Kubernetes object.  
 It provides a stable way to access Pods, even if the underlying Pods change or restart.
