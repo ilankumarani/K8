@@ -82,7 +82,7 @@ Below is a conceptual diagram of how Services work in Kubernetes:
 2. **NodePort** → Exposes service on `<NodeIP>:<Port>` for external traffic.
 3. **LoadBalancer** → Cloud provider external IP balances across nodes.
 
-![Kubernetes Services Diagram](../images/ClusterIP_vs_NodePort_vs_LoadBalancer.png)
+![Kubernetes Services Diagram](../../images/ClusterIP_vs_NodePort_vs_LoadBalancer.png)
 
 ---
 
