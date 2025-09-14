@@ -78,7 +78,7 @@ spec:
 </details>
 
 ### 3.1) LimitRange and ResourceQuota
-[Read more about yaml](Doc/readMe/K8s-Resource-Management-Full-README.md)
+[🔗Read more about yaml](Doc/readMe/K8s-Resource-Management-Full-README.md)
 
 **How it works with LimitRange:**
 *	**LimitRange →** sets defaults per Pod/container.
