@@ -1,4 +1,4 @@
-## 1) Namespace
+# 📘 1) Namespace
 
 A namespace in Kubernetes (k8s) is like a folder that helps organize and separate different groups of resources (like pods, services, deployments) inside the same cluster.
 
@@ -7,11 +7,11 @@ A namespace in Kubernetes (k8s) is like a folder that helps organize and separat
 *	Your computer has one big hard drive (the cluster).
 *	You create different folders (the namespaces) to keep files for different projects separate, even though they’re all on the same hard drive.
 
-[Click to learn](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+[🔗 Click to learn](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
 -----
 
-## 2) POD and POD lifecycle
+# 📘 2) POD and POD lifecycle
 
 <details open>
 
@@ -34,21 +34,21 @@ A Pod is Kubernetes’ smallest deployable unit: one or more containers that run
 
 <summary>Lifecycle of pod</summary>
 
-[Click here to learn about Lifecycle](PDF/LifeCycle_of_POD.pdf)
+[🔗Click here to learn about Lifecycle](PDF/LifeCycle_of_POD.pdf)
 
 
 > [!NOTE]
 >
 > CrashLoopBackOff is the one important lifecycle of POD
 >
-> [Click here to learn about CrashLoopBackOff](readMe/CrashLoopBackOff-README-section.md)
+> [🔗Click here to learn about CrashLoopBackOff](readMe/CrashLoopBackOff-README-section.md)
 
 </details>
 
-[Click for Example POD yml](Doc/resources/Create_pod.yml)
+[🔗Click for Example POD yml](Doc/resources/Create_pod.yml)
 
 ------
-## 3) Request & Limit
+# 📘 3) Request & Limit
 
 **Request →** the minimum amount of CPU/Memory a Pod needs to run. Kubernetes will guarantee at least this much.
 
@@ -89,7 +89,7 @@ spec:
 *	**ResourceQuota =** total company budget (Namespace).
 
 ------
-## 4) ReplicaSet
+# 📘 4) ReplicaSet
 
 A Replica in Kubernetes means how many copies of your Pod you want running at the same time.
 
@@ -120,18 +120,18 @@ kubectl get rs <replicaSet_name>
 >
 > **Deleting a ReplicaSet also deletes all its Pods associated with that.**
 >
-> [Click here to learn](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
+> [🔗Click here to learn](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 
 </details>
 
 ------
-## 5) DemonSet
+# 📘 5) DemonSet
 A DaemonSet ensures that all (or some) Nodes run a copy of a Pod(example Splunk Agent in each Node)
 
-[Click to know more about DemonSet](Doc/readMe/DaemonSet-README.md)
+[🔗Click to know more about DemonSet](Doc/readMe/DaemonSet-README.md)
 
 ------
-## 6) Deployment
+# 📘 6) Deployment
 
 ## 🔹 Simple words
 A **Deployment** is like a smart manager.  
@@ -147,7 +147,7 @@ It guarantees availability, scaling, rolling updates, and rollbacks.
 
 <summary> Expand here to learn more</summary>
 
-[Click to see more and Deployment.yml](Doc/readMe/Deployment.md)
+[🔗Click to see more and Deployment.yml](Doc/readMe/Deployment.md)
 ### ✅ What a Deployment YAML contains
 - **apiVersion** → which API version to use (usually `apps/v1`).
 - **kind** → always `Deployment`.
@@ -168,7 +168,7 @@ A Deployment is the **blueprint** that tells Kubernetes **what app to run, how m
 
 
 
-## 7) Labels and selectors
+# 📘 7) Labels and selectors
 
 **Simple words:**
 
@@ -182,11 +182,11 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
 
 <summary>Expand to learn more</summary>
 
-[Click here to learn **some**](Doc/readMe/lables&selector/Label&Selector1.md)
+[🔗Click here to learn **some**](Doc/readMe/lables&selector/Label&Selector1.md)
 
-[Click here to learn **more**](Doc/readMe/lables&selector/Label&Selector2.md)
+[🔗Click here to learn **more**](Doc/readMe/lables&selector/Label&Selector2.md)
 
-[Click here for **types of Selector**](Doc/readMe/lables&selector/K8s_Selectors_Guide_Readme.md)
+[🔗Click here for **types of Selector**](Doc/readMe/lables&selector/K8s_Selectors_Guide_Readme.md)
 
 ## 🖼️ Tagging Resources
 
@@ -224,7 +224,24 @@ Some labels are vital(**essential**) (e.g. service's selector, operators, etc.),
 </details>
 
 -----
-## 7) Services
+# 📘8) Services
+
+## 🔹 What is a Service?
+A **Service** is another type of Kubernetes object.  
+It provides a stable way to access Pods, even if the underlying Pods change or restart.
+
+
+## 🔹 Key Points
+- Pod IPs are **unreliable**, but **Service IPs are stable**.
+- Services are **durable (unlike Pods)**:
+    - Provide a **static IP address**.
+    - Provide a **static DNS name**.
+    - Follow the format: `[servicename].[namespace].svc.cluster.local`.
+- Services are the **gateway** to access Pods.
+- They target Pods using **selectors** (match labels).
+
+👉 **In short**: A Service gives a **stable network identity** to access Pods reliably inside (or outside) the cluster.
+
 
 ### 7.1) NodePort
 
@@ -238,6 +255,6 @@ By default, Kubernetes NodePort uses ports in the range 30000–32767.
 
 ------
 ## K8 commands
-[Cheat sheet](https://spacelift.io/blog/kubernetes-cheat-sheet)
+[🔗Cheat sheet](https://spacelift.io/blog/kubernetes-cheat-sheet)
 
-[Click to know more about Commands](Doc/readMe/General.md)
+[🔗Click to know more about Commands](Doc/readMe/General.md)
