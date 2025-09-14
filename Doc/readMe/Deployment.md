@@ -34,31 +34,29 @@ A typical Deployment YAML includes:
 
 ---
 
-## Example Deployment YAML  
-
+## 🔹 Example Deployment YAML
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: my-app
   labels:
-    app: nginx
+    app: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
-  #Below template is for POD, Label is for POD      
+      app: my-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: my-app
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: my-app
+        image: my-image:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ```
 
 ---
