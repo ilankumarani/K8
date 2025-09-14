@@ -89,7 +89,7 @@ spec:
 *	**ResourceQuota =** total company budget (Namespace).
 
 ------
-# 📘 4) ReplicaSet
+# 📘 4) ReplicaSet = (Replicas of Pods)
 
 A Replica in Kubernetes means how many copies of your Pod you want running at the same time.
 
@@ -243,13 +243,15 @@ It provides a stable way to access Pods, even if the underlying Pods change or r
 👉 **In short**: A Service gives a **stable network identity** to access Pods reliably inside (or outside) the cluster.
 
 
-### 7.1) NodePort
+### 7.1) NodePort = NodePort + ClusterIp
+
+
 
 By default, Kubernetes NodePort uses ports in the range 30000–32767.
 
-### 7.1) ClusterIp
+### 7.1) ClusterIp = ClusterIp
 
-### 7.2) Ingress
+### 7.2) Load balancer = Load balancer + NodePort + ClusterIp
 
 
 
