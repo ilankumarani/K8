@@ -22,12 +22,55 @@
 🔹	Provides path-based (/api/v1/users) or host-based (shop.example.com) routing to different microservices inside the cluster.<br>
 🔹	Typically uses reverse proxies (NGINX, Traefik, HAProxy).
 
+```mermaid
+---
+title: Ingress
+---
+flowchart LR
+     User[External User]
+     Ingress[Ingress Controller]
+     SvcA[Service A]
+     SvcB[Service B]
+     PodA[Pod A]
+     PodB[Pod B]
+
+     User -- HTTP/HTTPS --> Ingress
+     Ingress -- /app1 --> SvcA
+     Ingress -- /app2 --> SvcB
+     SvcA -- Internal --> PodA
+     SvcB -- Internal --> PodB
+
+```
+
 🔷 	**LoadBalancer →**
 
 🔹	Works at the network layer (Layer 4/7).<br>
 🔹	Ensures traffic is distributed evenly across replicas (pods) of the same service.<br>
 🔹	In Kubernetes, a Service (ClusterIP/NodePort/LoadBalancer) inherently balances load between all its backing pods.
 
+```mermaid
+---
+title: Load balancer with Ingress
+---
+flowchart LR
+     User[External User]
+     LB[LoadBalancer Service]
+     IngressCtrl[Ingress Controller]
+     Ingress[Ingress Rules]
+     SvcA[Service A]
+     SvcB[Service B]
+     PodA[Pod A]
+     PodB[Pod B]
+
+     User -- Public IP --> LB
+     LB -- Forwards --> IngressCtrl
+     IngressCtrl -- Reads --> Ingress
+     Ingress -- /app1 --> SvcA
+     Ingress -- /app2 --> SvcB
+     SvcA -- Internal --> PodA
+     SvcB -- Internal --> PodB
+
+```
 
 Ingress = routes to the right microservice.
 LoadBalancer = balances traffic between the replicas of that microservice.
