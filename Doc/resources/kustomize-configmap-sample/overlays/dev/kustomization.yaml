@@ -1,0 +1,9 @@
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: app-config
+    behavior: merge
+    literals:
+      - LOG_LEVEL=debug
+      - FEATURE_X_ENABLED=false

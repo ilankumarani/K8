@@ -1,0 +1,19 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+
+configMapGenerator:
+  - name: app-config
+    files:
+      - application.yml=config/application.yml
+    literals:
+      - LOG_LEVEL=info
+      - FEATURE_X_ENABLED=true
+
+generatorOptions:
+  # keep default behavior (hash added to name on content changes)
+  disableNameSuffixHash: false
+  labels:
+    app.kubernetes.io/component: config
+  annotations:
+    managed-by: kustomize
