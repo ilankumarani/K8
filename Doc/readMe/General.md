@@ -1,11 +1,8 @@
 ###### Get all kubernetes kind(Object): list
 ```shell
-kubectl api-resources
-```
-
-###### K8 create namspace
-```shell
-kubectl create namespace ilan-dev
+kubectl api-resources # Get all kubernetes kind(Object): list
+kubectl create namespace ilan-dev # K8 create namespace
+kubectl exec -it <pod-name> /bin/bash # interactive POD and see what is inside pod
 ```
 
 ```yaml
